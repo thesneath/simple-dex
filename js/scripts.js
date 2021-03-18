@@ -30,3 +30,15 @@ let pokemonList = [
         type: ['Dragon', 'Flying']
     } 
 ];
+
+// this loops through the pokemonList array and prints a <div> to the DOM containing: "'pokemon name' (height: 'height')" 
+
+document.write("<div class=\"text\">");
+for(i = 0; i < pokemonList.length; i++) {
+    document.write(`${pokemonList[i].name} (height: ${pokemonList[i].height})`);
+    if(pokemonList[i].height > 5){
+        document.write(' - Crikey, look at the size of this one!')
+    }
+    document.write("<br><br>");
+}
+document.write("</div>");

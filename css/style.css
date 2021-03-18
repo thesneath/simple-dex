@@ -1,0 +1,26 @@
+:root {
+   --primary-color: #0378A6;
+   --secondary-color: #0367A6;
+   --accent-1: #D92546;
+   --light: #D9D9D9;
+   --dark: #404040;
+}
+
+
+
+body {
+    text-align: center;
+    padding: 100px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 24px;
+    background-color: var(--light);
+    color: var(--light);
+}
+
+.text {
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    padding: 40px 10px;
+}
+
+/* media queries */
