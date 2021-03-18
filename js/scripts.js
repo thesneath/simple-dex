@@ -35,10 +35,10 @@ let pokemonList = [
 
 document.write("<div class=\"text\">");
 for(i = 0; i < pokemonList.length; i++) {
-    document.write(`${pokemonList[i].name} (height: ${pokemonList[i].height})`);
     if(pokemonList[i].height > 5){
-        document.write(' - Crikey, look at the size of this one!')
+        document.write(`<p>${pokemonList[i].name} (height: ${pokemonList[i].height}) - Crikey, look at the size of this one!</p>`)
+    } else {
+        document.write(`<p>${pokemonList[i].name} (height: ${pokemonList[i].height})</p>`);
     }
-    document.write("<br><br>");
 }
 document.write("</div>");
