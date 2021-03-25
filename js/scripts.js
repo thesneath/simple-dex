@@ -39,8 +39,7 @@ let pokemonRepository = (function() {
     // logs pokemon name to console
     function showDetails(pokemon){
         loadDetails(pokemon).then(function(){
-            console.log(pokemon);
-            showModal(pokemon)
+            showModal(pokemon);
         });
     }
 
@@ -75,6 +74,8 @@ let pokemonRepository = (function() {
         })
     }
 
+    // show and hidemodal functions
+
     function showModal(pokemon) {
         modalContainer.innerHTML = '';
 
@@ -85,6 +86,7 @@ let pokemonRepository = (function() {
         let closeButtonElement = document.createElement('button');
         closeButtonElement.classList.add('modal-close');
         closeButtonElement.innerText = 'x';
+        closeButtonElement.addEventListener('click', hideModal)
 
         let nameElement = document.createElement('h2');
         nameElement.innerText = pokemon.name;
@@ -92,6 +94,7 @@ let pokemonRepository = (function() {
         let typesContainer = document.createElement('div');
         typesContainer.classList.add('types-container');
 
+        // creates a div element containing each type and associates the type with a corresponding background collor
         pokemon.types.forEach(type => {
             let typesElement = document.createElement('div');
             let typesText = document.createElement('p');
@@ -117,6 +120,23 @@ let pokemonRepository = (function() {
         modalContainer.appendChild(modal);
     }
 
+    function hideModal() {
+        modalContainer.classList.remove('is-visible');
+    }
+
+    window.addEventListener('keydown', event => {
+        if(event.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+            hideModal();
+        }
+    })
+
+    modalContainer.addEventListener('click', event => {
+        let target = event.target;
+        if(target === modalContainer) {
+            hideModal();
+        }
+    })
+
     return {
         add: add,
         getAll: getAll,
@@ -125,7 +145,8 @@ let pokemonRepository = (function() {
         addListItem: addListItem,
         addDetailsListener: addDetailsListener,
         showDetails: showDetails,
-        showModal: showModal
+        showModal: showModal,
+        hideModal: hideModal
     }; 
 })();
 

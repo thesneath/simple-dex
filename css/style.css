@@ -37,7 +37,7 @@ body {
     background-color: var(--secondary-color);
     color: var(--light);
     border-radius: 3px;
-    padding: 30px 20px;
+    padding: 20px 10px;
     margin-bottom: 30px;
 }
 .pokemon-list {
@@ -55,6 +55,16 @@ body {
     padding: 15px;
     text-align: left;
     text-transform: capitalize;
+    transition: opacity .2s;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.button:active {
+    opacity: 1;
+    border: 2px solid var(--primary-color);
 }
 
 .modal-container {
@@ -84,6 +94,7 @@ body {
     max-width: 700px;
     border-radius: 3px;
     color: var(--dark);
+    text-transform: capitalize;
 }
 
 .modal-close {
@@ -93,7 +104,11 @@ body {
     color: var(--dark);
 }
 
-.modal h2, p{
+.modal-close:hover {
+    color: var(--accent-1);
+}
+
+.modal h2, .modal p{
     margin-top: 0;
     text-align: left;
 }
@@ -102,7 +117,7 @@ body {
     width: 30%;
 }
 
-/* type colors  */
+/* type section  */
 
 .types-container {
     display: grid;
@@ -111,7 +126,7 @@ body {
     grid-gap: 5px;
     width: 50%;
     margin-top: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .type {
@@ -120,6 +135,7 @@ body {
     align-items: center;
     color: var(--light);
     border-radius: 3px;
+    text-transform: uppercase;
 }
 
 .type > p, h2 {
@@ -161,13 +177,23 @@ body {
 }
 
 @media only screen and (max-width: 500px){
+    .header-nav {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
     .text {
-        width: 90%;
+        width: 100%;
         padding: 5px 5px;
     }
 
     .button {
         width: 90%;
         text-align: center;
+    }
+
+    .modal img {
+        width: 50%;
     }
 }
