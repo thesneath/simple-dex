@@ -102,10 +102,15 @@ body {
     border: 0;
     background: none;
     color: var(--dark);
+    transition: color .2s;
 }
 
 .modal-close:hover {
     color: var(--accent-1);
+}
+
+.modal-close:active {
+    font-size: 22px;
 }
 
 .modal h2, .modal p{
@@ -160,6 +165,8 @@ body {
 .dark { background: #705746 }
 .steel { background: #B7B7CE }
 .fairy { background: #D685AD }
+
+/* hexidecimals for colors found here: https://www.epidemicjohto.com/t882-type-colors-hex-colors  */
 
 
 
