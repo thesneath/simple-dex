@@ -40,6 +40,7 @@ body {
     padding: 20px 10px;
     margin-bottom: 30px;
 }
+
 .pokemon-list {
     list-style-type: none;
     padding-left: 0;
@@ -58,6 +59,10 @@ body {
     transition: opacity .2s;
 }
 
+.btn {
+    font-size: 24px;
+}
+
 .button:hover {
     opacity: 0.8;
 }
@@ -67,6 +72,8 @@ body {
     border: 2px solid var(--primary-color);
 }
 
+/* leaving this here because I want to keep some of the style once i get the modal to show  */
+/* 
 .modal-container {
     position: fixed;
     padding: 20px;
@@ -83,7 +90,7 @@ body {
 
 .modal-container.is-visible {
     display: grid;
-}
+} 
 
 .modal {
     margin: auto;
@@ -120,7 +127,7 @@ body {
 
 .modal img {
     width: 30%;
-}
+} */
 
 /* type section  */
 
