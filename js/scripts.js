@@ -22,14 +22,11 @@ let pokemonRepository = (function() {
         button.innerText = pokemon.name;
         button.classList.add('button');
         button.classList.add('btn');
-        button.classList.add('btn-light');
         button.classList.add('col');
-        button.setAttribute('data-target', '#exampleModal')
-        button.setAttribute('data-toggle', 'modal')
-
+        button.setAttribute('data-bs-target', '#pokeModal')
+        button.setAttribute('data-bs-toggle', 'modal')
         button.type = "button";
         
-
         listItem.appendChild(button);
         pokemonUl.appendChild(listItem);
  
@@ -47,6 +44,7 @@ let pokemonRepository = (function() {
     // Opens modal with pokemon info
     function showDetails(pokemon){
         loadDetails(pokemon).then(function(){
+            console.log(pokemon)
             showModal(pokemon);
         });
     }
@@ -96,9 +94,8 @@ let pokemonRepository = (function() {
 
         let imageElement = document.createElement('img');
         imageElement.classList.add('modal-img');
-        imageElement.style = "width=40";
+        imageElement.style = "width: 40%";
         imageElement.src = pokemon.imageUrl;
-
         let heightElement = document.createElement('p');
         heightElement.innerText = `Height: ${pokemon.height}`;
 
@@ -131,7 +128,6 @@ let pokemonRepository = (function() {
         addDetailsListener: addDetailsListener,
         showDetails: showDetails,
         showModal: showModal,
-        // hideModal: hideModal
     }; 
 })();
 
