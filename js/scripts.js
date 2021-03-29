@@ -44,7 +44,6 @@ let pokemonRepository = (function() {
     // Opens modal with pokemon info
     function showDetails(pokemon){
         loadDetails(pokemon).then(function(){
-            console.log(pokemon)
             showModal(pokemon);
         });
     }
