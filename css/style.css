@@ -32,7 +32,7 @@ body {
 }
 
 .text {
-    width: 70%;
+    width: 50%;
     margin: auto;
     background-color: var(--secondary-color);
     color: var(--light);
