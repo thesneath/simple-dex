@@ -18,6 +18,7 @@ let pokemonRepository = (function () {
     let listItem = document.createElement('li');
     listItem.classList.add('group-list-item');
 
+    // each pokemon will be displayed within one of these buttons 
     let button = document.createElement('button');
     button.innerText = pokemon.name;
     button.classList.add('button');
@@ -106,6 +107,7 @@ let pokemonRepository = (function () {
     let typesContainer = document.createElement('div');
     typesContainer.classList.add('types-container');
 
+    //Creates a div that displays the cooresponding background color for each type. 
     pokemon.types.forEach((type) => {
       let typesElement = document.createElement('div');
       let typesText = document.createElement('p');
@@ -116,6 +118,7 @@ let pokemonRepository = (function () {
       typesElement.appendChild(typesText);
       typesContainer.appendChild(typesElement);
     });
+
     modalTitle.appendChild(nameElement);
     modalBody.appendChild(typesContainer);
     modalBody.appendChild(heightElement);
