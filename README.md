@@ -1,20 +1,26 @@
-Hello! 
-Welcome to SimpleDex by Alex Sneath. 
-You can see this project in action at https://thesneath.github.io/simple-dex/
+# SimpleDex
 
-Project Dependencies:
-    * JavaScript
-    * BootStrap
+This is a Javascript app that displays the first 151 Pokémon.
+[See it in action](thesneath.github.io/simple-dex)
 
-This is a Pokédex that interacts with the PokeApi API to gather the following information:
-    * The first 151 Pokémon
-    * Each Pokemon's:
-        * Name
-        * Types
-        * Height (in decimeters)
-        * Front Image
+## Description
+
+This is a Pokédex that interacts with the PokéApi API to gather the following information:
+- The first 151 Pokémon
+- Each Pokémon's:
+   - Name
+   - Type(s)
+   - Height (in decimeters)
+   - Front Image
 
 Each Pokémon is displayed as a clickable list item. 
 When an item is clicked, a Bootstrap modal pops up and displays the above details.
 
-Thanks for taking a look! 
+### Dependencies
+
+- JavaScript
+- BootStrap
+
+## Authors
+
+Alex Sneath
