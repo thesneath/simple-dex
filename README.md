@@ -1,7 +1,7 @@
 # SimpleDex
 
 This is a Javascript app that displays the first 151 Pokémon.
-[See it in action](thesneath.github.io/simple-dex)
+[See it in action](https://thesneath.github.io/simple-dex)
 
 ## Description
 
